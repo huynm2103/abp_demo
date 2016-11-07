@@ -1,0 +1,564 @@
+DEBUG 2016-11-02 15:20:51,492 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-02 15:20:51,582 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2016-11-02 15:20:51,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:51,595 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2016-11-02 15:20:52,162 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:20:54,911 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-02 15:20:54,950 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-02 15:20:54,951 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-02 15:20:54,952 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-02 15:20:55,187 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-02 15:20:55,228 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-02 15:20:55,228 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-02 15:20:55,545 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-02 15:20:55,545 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-02 15:21:02,972 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-02 15:21:03,013 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+ERROR 2016-11-02 15:21:32,119 [8    ] nHandling.AbpApiExceptionFilterAttribute - ComponentActivator: could not instantiate SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext
+Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: CREATE DATABASE statement not allowed within multi-statement transaction.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass1a.<CreateDatabaseFromScript>b__19(DbConnection conn)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass33.<UsingConnection>b__32()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.CreateDatabaseFromScript(Nullable`1 commandTimeout, DbConnection sqlConnection, String createDatabaseScript)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DbCreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Common.DbProviderServices.CreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateDatabase()
+   at System.Data.Entity.Migrations.Utilities.DatabaseCreator.Create(DbConnection connection)
+   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   at System.Data.Entity.Internal.DatabaseCreator.CreateDatabase(InternalContext internalContext, Func`3 createMigrator, ObjectContext objectContext)
+   at System.Data.Entity.Internal.InternalContext.CreateDatabase(ObjectContext objectContext, DatabaseExistenceState existenceState)
+   at System.Data.Entity.Database.Create(DatabaseExistenceState existenceState)
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
+   at System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
+   at Abp.EntityFramework.AbpDbContext.RegisterToChanges() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\AbpDbContext.cs:line 140
+   at Abp.EntityFramework.AbpDbContext..ctor(String nameOrConnectionString) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\AbpDbContext.cs:line 84
+   at SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext..ctor(String nameOrConnectionString) in E:\HuyNguyen_workspace\self_study\SimpleTaskSystem\SimpleTaskSystem.EntityFramework\EntityFramework\SimpleTaskSystemDbContext.cs:line 22
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   --- End of inner exception stack trace ---
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   at Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   at Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   at Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   at Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   at Castle.Windsor.WindsorContainer.Resolve[T](Object argumentsAsAnonymousType)
+   at Abp.Dependency.IocManager.Resolve[T](Object argumentsAsAnonymousType) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:line 184
+   at Abp.EntityFramework.DefaultDbContextResolver.Resolve[TDbContext](String connectionString) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\DefaultDbContextResolver.cs:line 22
+   at Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\EfUnitOfWork.cs:line 130
+   at Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkExtensions.cs:line 38
+   at Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.GetDbContext(Nullable`1 multiTenancySide) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkDbContextProvider.cs:line 33
+   at Castle.Proxies.TaskRepositoryProxy.get_Context_callback()
+   at Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 53
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 45
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 35
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskRepositoryProxy.get_Context()
+   at Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs:line 31
+   at Castle.Proxies.TaskRepositoryProxy.get_Table_callback()
+   at Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 53
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 45
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 35
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskRepositoryProxy.get_Table()
+   at Castle.Proxies.TaskRepositoryProxy.GetAll_callback()
+   at Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 53
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 45
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 35
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskRepositoryProxy.GetAll()
+   at SimpleTaskSystem.EntityFramework.Repositories.TaskRepository.GetAllWithPeople(Nullable`1 assignedPersonId, Nullable`1 state) in E:\HuyNguyen_workspace\self_study\SimpleTaskSystem\SimpleTaskSystem.EntityFramework\EntityFramework\Repositories\TaskRepository.cs:line 23
+   at Castle.Proxies.TaskRepositoryProxy.GetAllWithPeople_callback(Nullable`1 assignedPersonId, Nullable`1 state)
+   at Castle.Proxies.Invocations.ITaskRepository_GetAllWithPeople.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 53
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 45
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 35
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskRepositoryProxy.GetAllWithPeople(Nullable`1 assignedPersonId, Nullable`1 state)
+   at SimpleTaskSystem.Tasks.TaskAppService.GetTasks(GetTasksInput input) in E:\HuyNguyen_workspace\self_study\SimpleTaskSystem\SimpleTaskSystem.Application\Tasks\TaskAppService.cs:line 36
+   at Castle.Proxies.TaskAppServiceProxy.GetTasks_callback(GetTasksInput input)
+   at Castle.Proxies.Invocations.ITaskAppService_GetTasks.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 53
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 45
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 35
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Auditing\AuditingInterceptor.cs:line 29
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:line 34
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskAppServiceProxy.GetTasks(GetTasksInput input)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:line 44
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Security\AntiForgery\AbpAntiForgeryApiFilter.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2016-11-02 15:21:55,524 [15   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-11-02 15:21:55,527 [15   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-02 15:21:55,528 [15   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-02 15:21:55,528 [15   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-11-02 15:26:37,593 [19   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-02 15:26:37,606 [19   ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2016-11-02 15:26:37,610 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,612 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,612 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,612 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,613 [19   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:37,616 [19   ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2016-11-02 15:26:37,870 [19   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-02 15:26:38,919 [19   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-02 15:26:38,924 [19   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-02 15:26:38,924 [19   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-02 15:26:38,926 [19   ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-02 15:26:39,074 [19   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-02 15:26:39,100 [19   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-02 15:26:39,101 [19   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-02 15:26:39,234 [19   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-02 15:26:39,234 [19   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-02 15:26:43,049 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-02 15:26:43,075 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2016-11-02 15:27:25,984 [17   ] SimpleTaskSystem.Tasks.TaskAppService    - Creating a task for input: [CreateTaskInput > AssignedPersonId = 1, Description = abc]
+INFO  2016-11-02 15:27:55,507 [17   ] SimpleTaskSystem.Tasks.TaskAppService    - Creating a task for input: [CreateTaskInput > AssignedPersonId = , Description = asdasds]
+WARN  2016-11-03 14:11:38,546 [45   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-03 14:11:38,546 [45   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2016-11-03 14:20:20,763 [40   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-11-03 14:20:20,764 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 14:20:20,765 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 14:20:20,765 [40   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-11-03 14:46:10,907 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-03 14:46:11,479 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2016-11-03 14:46:11,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:11,488 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2016-11-03 14:46:12,827 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 14:46:13,061 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-03 14:46:13,066 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-03 14:46:13,067 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-03 14:46:13,091 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-03 14:46:13,327 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 14:46:13,346 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-03 14:46:13,347 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-03 14:46:13,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-03 14:46:13,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-03 15:50:01,426 [6    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-03 15:50:01,450 [6    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2016-11-03 17:24:38,746 [16   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-11-03 17:24:38,747 [16   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 17:24:38,747 [16   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 17:24:38,747 [16   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-11-03 17:26:38,859 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-03 17:26:38,870 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2016-11-03 17:26:38,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:38,881 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2016-11-03 17:26:39,124 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 17:26:40,296 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-03 17:26:40,302 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-03 17:26:40,304 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-03 17:26:40,317 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-03 17:26:40,447 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 17:26:40,482 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-03 17:26:40,483 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-03 17:26:40,606 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-03 17:26:40,606 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-03 17:26:44,365 [71   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-03 17:26:44,388 [71   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+ERROR 2016-11-03 17:52:28,524 [70   ] nHandling.AbpApiExceptionFilterAttribute - A task was canceled.
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Security\AntiForgery\AbpAntiForgeryApiFilter.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-11-03 18:19:03,708 [61   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:19:39,055 [52   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:20:27,025 [61   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:21:36,658 [52   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:22:03,340 [5    ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:22:14,839 [30   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:23:45,841 [63   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:24:54,835 [24   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:25:12,947 [63   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+INFO  2016-11-03 18:25:16,358 [63   ] SimpleTaskSystem.Tasks.TaskAppService    - Creating a task for input: [CreateTaskInput > AssignedPersonId = 1, Description = abc]
+WARN  2016-11-03 18:27:28,353 [30   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:29:23,305 [24   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:29:56,416 [25   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:30:52,518 [30   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:31:02,677 [52   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:33:23,413 [25   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:33:32,848 [38   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+WARN  2016-11-03 18:33:38,839 [50   ] Abp.Logging.LogHelper                    - Can not find 'UpdateTheTask' in localization source 'SimpleTaskSystem'!
+DEBUG 2016-11-03 18:33:48,745 [38   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-11-03 18:33:48,746 [38   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 18:33:48,747 [38   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 18:33:48,747 [38   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-11-03 18:34:10,208 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-03 18:34:10,223 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2016-11-03 18:34:10,227 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:10,233 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2016-11-03 18:34:10,544 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-03 18:34:11,028 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-03 18:34:11,032 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-03 18:34:11,033 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-03 18:34:11,040 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-03 18:34:11,199 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-03 18:34:11,224 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-03 18:34:11,225 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-03 18:34:11,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-03 18:34:11,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-03 18:34:14,846 [52   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-03 18:34:14,876 [52   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-04 09:23:38,774 [373  ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-04 09:23:38,774 [373  ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-04 09:23:41,725 [373  ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 94
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:line 31
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskAppServiceProxy.UpdateTask(UpdateTaskInput input)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:line 44
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.UpdateTask(UpdateTaskInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClassc.<GetExecutor>b__6(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Security\AntiForgery\AbpAntiForgeryApiFilter.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-11-04 09:23:42,010 [373  ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2016-11-04 09:23:42,010 [373  ] nHandling.AbpApiExceptionFilterAttribute - The field TaskId must be between 1 and 9.22337203685478E+18. (TaskId)
+WARN  2016-11-04 09:25:02,655 [372  ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 94
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:line 31
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.TaskAppServiceProxy.UpdateTask(UpdateTaskInput input)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:line 44
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.UpdateTask(UpdateTaskInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClassc.<GetExecutor>b__6(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Security\AntiForgery\AbpAntiForgeryApiFilter.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext() in D:\Halil\GitHub\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2016-11-04 09:25:02,656 [372  ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2016-11-04 09:25:02,656 [372  ] nHandling.AbpApiExceptionFilterAttribute - The field TaskId must be between 1 and 9.22337203685478E+18. (TaskId)
+INFO  2016-11-04 09:25:09,368 [374  ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 3, AssignedPersonId = 1, State = Active]
+INFO  2016-11-04 09:25:36,916 [374  ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 3, AssignedPersonId = 1, State = Active]
+DEBUG 2016-11-04 09:30:01,620 [368  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-11-04 09:30:01,621 [368  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-04 09:30:01,621 [368  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-04 09:30:01,621 [368  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-11-04 09:30:06,699 [37   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-04 09:30:06,708 [37   ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2016-11-04 09:30:06,715 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,716 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,716 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,717 [37   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:06,719 [37   ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2016-11-04 09:30:06,917 [37   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 09:30:07,457 [37   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-04 09:30:07,463 [37   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-04 09:30:07,464 [37   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-04 09:30:07,478 [37   ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-04 09:30:07,597 [37   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-04 09:30:07,618 [37   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-04 09:30:07,619 [37   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-04 09:30:07,752 [37   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-04 09:30:07,752 [37   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-04 09:30:11,739 [368  ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-04 09:30:11,790 [368  ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2016-11-04 09:30:21,217 [358  ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 3, AssignedPersonId = 1, State = Active]
+INFO  2016-11-04 09:30:28,230 [33   ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 3, AssignedPersonId = 2, State = Active]
+INFO  2016-11-04 09:50:51,757 [358  ] SimpleTaskSystem.Tasks.TaskAppService    - Creating a task for input: [CreateTaskInput > AssignedPersonId = , Description = hkhjkj]
+INFO  2016-11-04 09:50:58,570 [373  ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 4, AssignedPersonId = 4, State = Active]
+DEBUG 2016-11-04 14:29:23,487 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-04 14:29:23,500 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-11-04 14:29:23,504 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,507 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,507 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,507 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:23,512 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-11-04 14:29:23,877 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-04 14:29:25,025 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-04 14:29:25,060 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-04 14:29:25,061 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-04 14:29:25,074 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-04 14:29:25,293 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-04 14:29:25,325 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-04 14:29:25,326 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-04 14:29:25,567 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-04 14:29:25,567 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-04 14:29:29,348 [6    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-04 14:29:29,400 [6    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2016-11-04 14:29:36,935 [5    ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 4, AssignedPersonId = 4, State = Active]
+INFO  2016-11-04 14:29:43,530 [6    ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 4, AssignedPersonId = 4, State = Active]
+INFO  2016-11-04 14:29:46,867 [6    ] SimpleTaskSystem.Tasks.TaskAppService    - Updating a task for input: [UpdateTaskInput > TaskId = 1, AssignedPersonId = 1, State = Active]
+DEBUG 2016-11-07 14:52:19,305 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-11-07 14:52:19,329 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2016-11-07 14:52:19,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.WebSpaAngular.SimpleTaskSystemWebModule, SimpleTaskSystem.WebSpaAngular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:19,342 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2016-11-07 14:52:20,281 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SimpleTaskSystem.EntityFramework.SimpleTaskSystemDbContext, SimpleTaskSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-11-07 14:52:24,692 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2016-11-07 14:52:24,723 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-11-07 14:52:24,724 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-11-07 14:52:24,725 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleTaskSystem
+DEBUG 2016-11-07 14:52:25,071 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-11-07 14:52:25,114 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.Tasks.ITaskAppService' with service name 'tasksystem/task'.
+DEBUG 2016-11-07 14:52:25,115 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleTaskSystem.People.IPersonAppService' with service name 'tasksystem/person'.
+DEBUG 2016-11-07 14:52:25,437 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2016-11-07 14:52:25,437 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleTaskSystem.People.Dtos.PersonDto
+WARN  2016-11-07 14:52:32,566 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2016-11-07 14:52:32,589 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
